@@ -69,7 +69,8 @@ class MermaidPreprocessor(Preprocessor):
                 new_lines.append("")
                 m_end = None
             elif in_mermaid_code:
-                new_lines.append(strip_notprintable(line).strip())
+                # new_lines.append(strip_notprintable(line).strip())
+                new_lines.append(line.rstrip())
             else:
                 new_lines.append(line)
 
